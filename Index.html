@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Produtos</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Menu de Navegação -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="img/TECH-GEEK-600x600.jpg" alt="Logo GeekStore" class="navbar-brand-image">
+      GeekStore
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Produtos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contato</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="cart-button">Carrinho (<span id="cart-count">0</span>)</a>
+        </li>
+      </ul>
+    </div>
+  </nav>  <!-- Conteúdo Principal -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/motoedger50pro.png" class="card-img-top" alt="MotoEdger50pro">
+          <img src="img/motoedger50pro.2.png" class="card-img-top" alt="MotoEdger50pro">
+          <div class="card-body">
+            <h5 class="card-title">Smartphone Motorola Edge 50 Pro 5G</h5>
+            <p class="card-text">256GB 24GB Ram Boost 50MP Ultra-Pixel AI Camera IP68 NFC - Pearl Snapdragon 7 Gen 3 (2,6 GHz Octa-Core) | Adreno™ 720.</p>
+            <p class="card-text"><strong>Preço: R$ 2.400,00</strong></p>
+            <button class="btn btn-primary" onclick="adicionarAoCarrinho('Smartphone Motorola Edge 50 Pro 5G')">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/pocox6pro.jpg" class="card-img-top" alt="PocoX6Pro">
+          <img src="img/pocox6pro1.jpg" class="card-img-top" alt="PocoX6Pro">
+          <div class="card-body">
+            <h5 class="card-title">Smartphone Xiaomi POCO X6 Pro 5G</h5>
+            <p class="card-text">12GB+512GB NFC Dimensity 8300-Ultra 64MP câmera tripla 67W 120Hz AMOLED MediaTek Dimensity 8300 Ultra .</p>
+            <p class="card-text"><strong>Preço: R$ 2.200,00</strong></p>
+            <button class="btn btn-primary" onclick="adicionarAoCarrinho('PocoX6Pro')">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/SamsuS23Ult.jpg" class="card-img-top" alt="Samsung S22 Ultra">
+          <img src="img/SamsuS23Ult.23.jpg" class="card-img-top" alt="Samsung S22 Ultra">
+          <div class="card-body">
+            <h5 class="card-title">Samsung Galaxy S22 Ultra 256GB</h5>
+            <p class="card-text"> 256GB RAM 12GB Snapdragon 8 Gen1 Qualcomm SM8450 Cam 108 Mp + 12 Mp + 10 Mp + 10 Mp Dynamic AMOLED 2X</p>
+            <p class="card-text">Preço: R$ 2.600,00</p>
+            <button class="btn btn-primary" onclick="adicionarAoCarrinho('Samsung Galaxy S22 Ultra')">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/NotebookAcerNitro.jpg" class="card-img-top" alt="Notebook Acer">
+          <img src="img/acernitronoot.jpg" class="card-img-top" alt="Notebook Acer">
+          <div class="card-body">
+            <h5 class="card-title">Notebook Acer Nitro V15 ANV15-51-58AZ</h5>
+            <p class="card-text">V15 ANV15-51-58AZ 13ª Geração Intel Core i5-13420H, 8GB RAM, 512GB SSD, NVIDIA RTX 3050, 15.6" FHD LED IPS 144Hz, Windows 11, Preto, Retroiluminado</p>
+            <p class="card-text"><strong>Preço: R$ 3.600,00</strong></p>
+            <button class="btn btn-primary" onclick="adicionarAoCarrinho('NotebookAcerNitro')">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/NotebookVaioFE15.jpg" class="card-img-top" alt="NotebookVaioFE15">
+          <img src="img/NotebookVaioFE15.i5.jpg" class="card-img-top" alt="NotebookVaioFE15">
+          <div class="card-body">
+            <h5 class="card-title">Notebook VAIO FE15</h5>
+            <p class="card-text">Intel Core i5 12ª gen 8GB RAM 256GB SSD Tela 15 Polegadas, 15" Full HD Antirreflexo, Windows 11 Home, Cinza Grafite VJFE54F11X-B0111H</p>
+            <p class="card-text"><strong>Preço: R$ 2.200,00</strong></p>
+            <button class="btn btn-primary" onclick="adicionarAoCarrinho('NotebookVaioFE15')">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/NotebookDellinspironL15.jpg" class="card-img-top" alt="Notebook Dell inspiron">
+          <img src="img/NoteDellinspiron.jpg" class="card-img-top" alt="Notebook Dell inspiron">
+          <div class="card-body">
+            <h5 class="card-title">Notebook Dell Inspiron I15-I120K-A25P</h5>
+            <p class="card-text">15.6" Full HD 12ª Geração Intel Core i5 8GB 512GB SSD Windows 11 Preto</p>
+            <p class="card-text"><strong>Preço: R$ 2.800,00</strong></p>
+            <button class="btn btn-primary" onclick="adicionarAoCarrinho('Notebook Dell inspiron')">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/FiguraKaijun8.webp" class="card-img-top" alt="Figura Kaiju n8">
+          <div class="card-body">
+            <h5 class="card-title">Figura Kaiju No.8 </h5>
+            <p class="card-text">Kaiju No.8 - SH Figuarts - Bandai</p>
+            <p class="card-text"><strong>Preço: R$ 350,00</strong></p>
+            <button class="btn btn-primary" onclick="adicionarAoCarrinho('Figura Kaiju n8')">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/gokussj4.jpg" class="card-img-top" alt="Gokussj4">          <div class="card-body">
+            <h5 class="card-title">Figura Goku Super Saiyan 4</h5>
+            <p class="card-text">Dragon Ball - S.H.Figuarts - Bandai</p>
+            <p class="card-text"><strong>Preço: R$ 350,00</strong></p>
+            <button class="btn btn-primary" onclick="adicionarAoCarrinho('Gokussj4')">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/IkkideFenix.webp" class="card-img-top" alt="IkkideFenix">
+          <div class="card-body">
+            <h5 class="card-title">Figura Ikki de Fenix Early Bronze </h5>
+            <p class="card-text">Cloth 20TH Anniversary Ver.- Os Cavaleiros do Zodíaco - Cloth Myth - Bandai</p>
+            <p class="card-text"><strong>Preço: R$ 1.000,00</strong></p>
+            <button class="btn btn-primary" onclick="adicionarAoCarrinho('IkkideFenix')">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/pack-artes-canecas-nerds2.webp" class="card-img-top" alt="Pack Artes Canecas Nerds">
+          <div class="card-body">
+            <h5 class="card-title">Pack Artes Canecas Nerds Geeks Editável </h5>
+            <p class="card-text">A princípio o Pack Artes Canecas Nerds Geeks vem completo e com vários modelos de diversas artes do Mundo Nerd, com diversos personagens e histórias que marcaram a infância de muita gente.</p>
+            <p class="card-text"><strong>Preço: R$ 25,00</strong></p>
+            <button class="btn btn-primary" onclick="adicionarAoCarrinho('Pack Artes Canecas Nerds')">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/quadrosgeek.webp" class="card-img-top" alt="quadrosgeek">
+          <img src="img/quadrosgeek.1.webp" class="card-img-top" alt="quadrosgeek">
+          <div class="card-body">
+            <h5 class="card-title">Quadros Decorativos </h5>
+            <p class="card-text">Quadros Decorativos Geek Nerd Gamer Herois Com Moldura Cor Colorido Cor da armação Preto</p>
+            <p class="card-text"><strong>Preço: R$ 40,00</strong></p>
+            <button class="btn btn-primary" onclick="adicionarAoCarrinho('quadrosgeek')">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/camisas.geek.jpg" class="card-img-top" alt="camisas.geek">
+          <img src="img/BlusaMoletom.webp" class="card-img-top" alt="camisas.geek">
+          <div class="card-body">
+            <h5 class="card-title">Blusa Geek Camisa Algodão </h5>
+            <p class="card-text">Camisetas e Blusões de MoletomEscolha Estampas Blusa Geek Camisa Algodão - king of Geek</p>
+            <p class="card-text"><strong>Preço: R$ 35.99 e R$ 79.99 </strong></p>
+            <button class="btn btn-primary" onclick="adicionarAoCarrinho('Camisas Geek')">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+  <footer class="footer bg-dark text-white text-center py-3">
+    <p>Siga-nos:</p>
+    <a href="https://www.instagram.com" target="_blank">
+      <img src="img/icons8-instagram-150.png" alt="Instagram" class="social-icon"></a> 
+    <a href="https://www.whatsapp.com" target="_blank">
+      <img src="img/icons8-whatsapp-96.png" alt="WhatsApp" class="social-icon"></a><br>
+    <p>&copy; Veto-Br 2024 GeekStore. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Script do Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.amazonaws.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- Script para adicionar ao carrinho -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
